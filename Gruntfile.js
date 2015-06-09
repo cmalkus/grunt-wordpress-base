@@ -9,20 +9,18 @@ module.exports = function(grunt) {
 				banner: '/*! <%= pkg.name %> <%= grunt.template.today("yyyy-mm-dd") %> */\n'
 			},
 			build: {
-				cwd: 'wp-content/themes/<%= pkg.themeFolder %>/',
-				src: ['js/lib/*.js', 'js/mian.js'],
-				dest: 'js/mian.min.js'
+				src: ['wp-content/themes/<%= pkg.themeFolder %>/js/lib/*.js', 'wp-content/themes/<%= pkg.themeFolder %>/js/mian.js'],
+				dest: 'wp-content/themes/<%= pkg.themeFolder %>/js/mian.min.js'
 			}
 		},
 		
 		sass: {
 			dist: {
 				options: {
-					style: 'copressed'
+					style: 'compact'
 				},
-				cwd: 'wp-content/themes/<%= pkg.themeFolder %>/'
 				files: {
-					'css/style.css': 'css/style.scss'
+					'wp-content/themes/<%= pkg.themeFolder %>/style.css': 'wp-content/themes/<%= pkg.themeFolder %>/style.scss'
 				}
 			}
 		},
@@ -32,22 +30,20 @@ module.exports = function(grunt) {
 				files: [{
 					expand: true,
 					cwd: 'wp-content/themes/<%= pkg.themeFolder %>/',
-					src: ['*.{png,jpg,gif}'],
-					dest: 'images/build/'
+					src: ['wp-content/themes/<%= pkg.themeFolder %>/*.{png,jpg,gif}'],
+					dest: 'wp-content/themes/<%= pkg.themeFolder %>/images/build/'
 		    	}]
 			}
 		},
 		
 		watch:{
 			css: {
-				cwd: 'wp-content/themes/<%= pkg.themeFolder %>/',
-				files: 'css/*.scss',
+				files: 'wp-content/themes/<%= pkg.themeFolder %>/*.scss',
 				tasks: 'sass'
 			},
 			
 			scripts:{
-				cwd: 'wp-content/themes/<%= pkg.themeFolder %>/',
-				files: 'js/*.js',
+				files: 'wp-content/themes/<%= pkg.themeFolder %>/js/*.js',
 				tasks: 'uglify'
 			}
 		}

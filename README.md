@@ -6,7 +6,7 @@ This is the base install for a Grunt project. Installed grunt plugins include:
 - grunt-contrib-uglify
 - grunt-contrib-watch
 
-Don't forget to change the project name, description, etc. and run ```$ npm install``` initially, and ```$ grunt watch``` while making edits.
+Don't forget to change the project theme folder, name, description, etc. and run ```$ npm install``` initially, and ```$ grunt watch``` while making edits.
 
 Original files can be found at [https://github.com/cmalkus/grunt-base]
 

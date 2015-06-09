@@ -1,2 +1,5 @@
 .sass-cache/
 node_modules/
+wp-content/themes/blankslate/*.css
+wp-content/themes/blankslate/*.css.map
+wp-content/themes/blankslate/js/*.min.js
