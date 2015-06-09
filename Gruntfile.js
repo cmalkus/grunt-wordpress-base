@@ -30,8 +30,8 @@ module.exports = function(grunt) {
 				files: [{
 					expand: true,
 					cwd: 'wp-content/themes/<%= pkg.themeFolder %>/',
-					src: ['wp-content/themes/<%= pkg.themeFolder %>/*.{png,jpg,gif}'],
-					dest: 'wp-content/themes/<%= pkg.themeFolder %>/images/build/'
+					src: ['*.{png,jpg,gif}'],
+					dest: 'images/build/'
 		    	}]
 			}
 		},
